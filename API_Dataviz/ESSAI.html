@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+        }
+
+        #mapTitle {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+            color: #60012D; /* Nouvelle couleur du titre */
+        }
+
+        #searchBarContainer {
+            background-color: #e0e0e0;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            width: fit-content;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .searchBar {
+            margin-bottom: 10px;
+            display: inline-block;
+            width: 120px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #6F495B;
+        }
+
+        input {
+            width: 100px;
+            padding: 8px;
+            margin-bottom: 5px;
+            box-sizing: border-box;
+            font-size: 14px;
+            border: none;
+            outline: none;
+        }
+
+        button {
+            width: 80px;
+            padding: 8px;
+            cursor: pointer;
+            background-color: #7d938a;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        button:hover {
+            background-color: #667d73;
+        }
+
+        #map {
+            height: 500px;
+            margin-bottom: 10px;
+            z-index: 0;
+            width: 100%;
+        }
+
+        #legendsContainer {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background-color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .legend {
+            flex-grow: 1;
+            padding: 3px;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            margin-right: 3px;
+        }
+
+        .legend-bar {
+            height: 10px;
+            border-radius: 5px;
+            margin-bottom: 2px;
+        }
+
+        .impact-circle {
+            fill-opacity: 0.4;
+        }
+
+        #legendMarker {
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+            text-align: center;
+            color: #000;
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 3px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #legendMarker span {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #000;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+
+        #legendMarker p {
+            margin: 0;
+            line-height: 1.5;
+        }
+    </style>
+    <title>Carte des Impacts de Météorites</title>
+</head>
+
+<body>
+    <div id="mapTitle">Carte des impacts de météorites dans le Monde</div>
+
+    <div id="searchBarContainer">
+        <div class="searchBar">
+            <label for="nameInput" style="color: #675a60;">Nom:</label>
+            <input type="text" id="nameInput">
+        </div>
+        <div class="searchBar">
+            <label for="yearInput" style="color: #675a60;">Année:</label>
+            <input type="text" id="yearInput">
+        </div>
+        <div class="searchBar">
+            <label for="massInput" style="color: #675a60;">Masse (en g):</label>
+            <input type="text" id="massInput">
+        </div>
+        <div class="searchBar">
+            <label for="longitudeInput" style="color: #675a60;">Longitude:</label>
+            <input type="text" id="longitudeInput">
+        </div>
+        <div class="searchBar">
+            <label for="latitudeInput" style="color: #675a60;">Latitude:</label>
+            <input type="text" id="latitudeInput">
+        </div>
+        <div class="searchBar">
+            <label for="countryInput" style="color: #675a60;">Country:</label>
+            <input type="text" id="countryInput">
+        </div>
+        <button onclick="filterMeteorite()">Filtrer</button>
+    </div>
+
+    <div id="map"></div>
+
+    <div id="legendsContainer">
+        <div class="legend">
+            <div>Masses des météorites</div>
+            <div class="legend-bar" style="background: linear-gradient(to right, #ffcccc, #990000);"></div>
+            <div>1g - 1000g</div>
+        </div>
+        <div id="legendMarker">
+            <span></span>
+            <p>Point d'impact de la météorite</p>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="ESSAI.js"></script>
+</body>
+
+</html>
