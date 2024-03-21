@@ -1,3 +1,5 @@
+---VERSION FRANCAISE---
+
 # Meteor Impact Globe
 
 ## Introduction
@@ -54,5 +56,65 @@ Sur ce projet, j'ai appris comment organiser et structurer un projet grâce à l
 Le projet a duré deux semaines, ce qui nous a amenés à nous concentrer sur des solutions efficaces et à travailler avec rigueur pour atteindre nos objectifs dans les délais impartis.
 
 Ce projet nous a permis de développer nos compétences en programmation web tout en nous familiarisant avec la collaboration en équipe et la gestion de projet.
+
+
+---ENGLISH VERSION---
+# Meteor Impact Globe
+
+## Introduction
+
+This project was developed as part of a school project by a team of three: Domitille Bonnemain, Guillaume Depecker, and Marion Ochem. We also received valuable assistance from a software engineer based in Canada, Domitille's brother, who helped us organize and make effective decisions.
+
+## Project Overview
+
+Meteor Impact Globe is an interactive web application for visualizing meteorite impacts around the world. Our goal was to create a user-friendly and informative platform that uses data from NASA's API to display these events on an interactive map.
+
+## Project Architecture
+
+The Meteor Impact Globe project is primarily structured around three major components:
+
+1. **Data Retrieval (NASA API)**:
+   - We used NASA's API to collect information on meteorite impacts worldwide.
+   - A JavaScript script was set up to asynchronously query the API and retrieve the necessary data.
+
+2. **Data Display (Leaflet for the world map)**:
+   - We integrated the Leaflet library to display an interactive world map in our web application.
+   - Data on meteorite impacts is displayed as impact points represented by red circles on the Leaflet map.
+   - We used HTML, CSS, and JavaScript to manipulate HTML elements and CSS styles to create a user-friendly interface.
+
+3. **User Interaction**:
+   - Users can interact with the application using sorting features to display meteorites based on various criteria such as name, date, mass, latitude, longitude, and country.
+   - The user interface was designed to be intuitive and user-friendly, allowing users to easily navigate through the data and view meteorite details with ease.
+
+## Technologies Used
+
+- JavaScript
+- HTML
+- CSS
+- Leaflet (for the world map)
+
+## Features
+
+1. Use of NASA's API to retrieve information on meteorite impacts.
+2. Display of data as impact points on an interactive world map.
+3. Ability to sort displayed meteorites based on various criteria.
+4. User-friendly and intuitive interface.
+
+## Collaboration and Organization
+
+We used Jamboard to create a collaborative dashboard to stay organized and focus on our initial idea without deviating from our goal. The assistance of the software engineer was invaluable in structuring our ideas and making effective decisions quickly.
+
+We also adopted various programming approaches, including pair programming, mob programming, as well as solo development, allowing us to leverage the strengths of each team member.
+
+## Learnings
+
+On this project, I learned how to organize and structure a project thanks to the engineer who briefed and advised us on the best approach. I also gained new technical skills, including using an API, reading and displaying JSON files, and integrating dynamic data on a world map using a library like Leaflet. Additionally, this project helped me develop my ability to work within a limited time frame with constraints to meet.
+
+## Project Duration
+
+The project lasted two weeks, which required us to focus on effective solutions and work rigorously to achieve our goals within the allotted time.
+
+This project allowed us to develop our web programming skills while becoming familiar with teamwork and project management.
+
 
 
